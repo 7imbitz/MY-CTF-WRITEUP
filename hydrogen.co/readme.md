@@ -51,7 +51,7 @@ Give me a sum of running services on hydrogencorp.
 
 __ANSWER__
 
-3
+`3`
 
 __PROBLEM__
 
@@ -63,7 +63,7 @@ Give me the application version number. (e.g 1.2.6)
 
 __ANSWER__
 
-1.2.6
+`1.2.6`
 
 __PROBLEM__
 
@@ -75,7 +75,7 @@ Give me the software name running on port 80 on this host. (e.g. IIS)
 
 __ANSWER__
 
-nginx 1.2.1
+`nginx 1.2.1`
 
 __PROBLEM__
 
@@ -87,19 +87,7 @@ Give me the software and version running on port 22. (e.g. ProFTPD and 1.4.5
 
 __ANSWER__
 
-OpenSSH and 6.0p1
-
-__PROBLEM__
-
-What is the software and version running on port 22?
-
-__HINT__
-
-Give me the software and version running on port 22. (e.g. ProFTPD and 1.4.5)
-
-__ANSWER__
-
-OpenSSH and 6.0p1
+`OpenSSH and 6.0p1`
 
 __PROBLEM__
 
