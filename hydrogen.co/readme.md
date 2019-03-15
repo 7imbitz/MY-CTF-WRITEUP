@@ -205,20 +205,6 @@ found `./usr/share/nginx/www/robots.txt` which is interesting ofcourse..
 
 __PROBLEM__
 
-Get flag2
-
-__HINT__
-
-Find flag2 on the host and submit the the whole content of it.
-
-__ANSWER__
-
-go into the flag2.txt dir and we got the flag2..
-
-_flag{db6029f93797df27262460156bfbe0b9}_
-
-__PROBLEM__
-
 Get flag3
 
 __HINT__
