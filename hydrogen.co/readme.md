@@ -1,9 +1,11 @@
 # HYDROGEN
 
 __PROBLEM__
+
 The ip address was 192.168.0.10
 
 __SOLUTION__
+
 So let's start with NMAP tools to the ip address 
 `nmap -A -v 192.168.0.10`
 and we got the following output
@@ -38,69 +40,91 @@ Read data files from: /usr/bin/../share/nmap
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 7.29 seconds
 ```
+
 __PROBLEM__
+
 How many services running on Hydrogencorp
 
 __HINT__
+
 Give me a sum of running services on hydrogencorp.
 
 __ANSWER__
+
 3
 
 __PROBLEM__
+
 On the port for file transfer service, what is the version for the application?
 
 __HINT__
+
 Give me the application version number. (e.g 1.2.6)
 
 __ANSWER__
+
 1.2.6
 
 __PROBLEM__
+
 What is the software name running on port 80?
 
 __HINT__
+
 Give me the software name running on port 80 on this host. (e.g. IIS)
 
 __ANSWER__
+
 nginx 1.2.1
 
 __PROBLEM__
+
 What is the software and version running on port 22?
 
 __HINT__
+
 Give me the software and version running on port 22. (e.g. ProFTPD and 1.4.5
 
 __ANSWER__
+
 OpenSSH and 6.0p1
 
 __PROBLEM__
+
 What is the software and version running on port 22?
 
 __HINT__
+
 Give me the software and version running on port 22. (e.g. ProFTPD and 1.4.5)
 
 __ANSWER__
+
 OpenSSH and 6.0p1
 
 __PROBLEM__
+
 Get flag1
 
 __HINT__
+
 Find flag1 on the host and submit the the whole content of it.
 
 __ANSWER__
+
 As we can see at the ftp service, we can see the flag1.txt..
 went to the `ftp://192.168.0.10` through browser and we can get the content of it
 flag{a173c6cb236d6fe768ad94a6df400874}
 
 __PROBLEM__
+
 What is the domain name of the application?
 
 __HINT__
+
 Find the domain name of this host. (e.g. example.com)
 
 __ANSWER__
+
 There are also email.txt in ftp service, we check the content and we can see the domain.
 ```To: John <john@hydrogen.co>
 From: Alice <alice@ymail.com>
@@ -123,6 +147,7 @@ Sincerely,
 Alice
 alice@ymail.com
 ```
+
 hydrogen.co
 
 
