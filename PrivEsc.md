@@ -38,7 +38,11 @@ __check cleartxt cred__
 
 (find . -type f -maxdepth 4 | xargs grep -i "password")
 
+__reference__
+
 _http://www.securitysift.com/download/linuxprivchecker.py_
+
 _https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh_
+
 _https://gtfobins.github.io/_
 
