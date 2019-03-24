@@ -1,2 +1,2 @@
 # MY-CTF-WRITEUP
-A compilation of my ctf writeup
+A compilation of my ctf writeup for nbs company
