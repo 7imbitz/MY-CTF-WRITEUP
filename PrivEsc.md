@@ -1,3 +1,7 @@
+__python server__
+
+( python3 -m http.server 192.168.0.104:8080 )
+
 __interactive shell__
 
 (python -c "import pty;pty.spawn('/bin/bash')")
