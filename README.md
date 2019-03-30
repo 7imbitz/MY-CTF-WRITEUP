@@ -3,8 +3,8 @@ A compilation of my ctf writeup
 
 ## NBS COMPANY CTF
 
-* [hidrogen](hidrogen.co)
-* [nitrogen](nitrogen.co)
+* [hidrogen.co](hidrogen)
+* [nitrogen.co](nitrogen)
 
 ## EXTERNAL CTF
 
