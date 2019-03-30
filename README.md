@@ -3,10 +3,10 @@ A compilation of my ctf writeup
 
 ## NBS COMPANY CTF
 
-* [hidrogen.co](hidrogen.co)
-* [nitrogen.co](nitrogen.co)
+* [Hydrogen](hydrogen.co)
+* [Nitrogen](nitrogen.co)
 
 ## EXTERNAL CTF
 
-* [atur kreatif 2019 USIM](USIM)
+* [USIM](aturkreatif(USIM))
 
