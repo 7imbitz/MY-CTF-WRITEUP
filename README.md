@@ -10,3 +10,7 @@ A compilation of my ctf writeup
 
 * [USIM](aturkreatif(USIM))
 
+## CHEAT SHEET
+
+* [command](PrivEsc.md)
+
