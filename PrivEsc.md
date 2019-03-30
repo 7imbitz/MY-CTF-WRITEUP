@@ -12,7 +12,7 @@ __python server__
 
 __interactive shell__
 
-(python -c "import pty;pty.spawn('/bin/bash')")
+(python -c "import pty;pty.spawn('/bin/sh')")
 
 __change from non interactive to interactive__
 
