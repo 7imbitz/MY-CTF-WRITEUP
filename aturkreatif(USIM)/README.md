@@ -8,3 +8,4 @@
 * [puzzle100](puzzle100.md)
 * [puzzle200](puzzle200.md)
 * [sure2click](sure2click.md)
+* [stegacrypt](stegacrypt.md)
