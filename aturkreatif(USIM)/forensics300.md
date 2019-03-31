@@ -1,6 +1,6 @@
 __PROBLEM__
 
-we're given [jangan spam la ngok.doc](https://github.com/Adib7/MY-CTF-WRITEUP/blob/master/aturkreatif(USIM)/jangan%20spam%20la%20ngok.doc) file..
+we're given `jangan spam la ngok.doc` file..
 
 `file jangan spam la ngok.doc`
 
