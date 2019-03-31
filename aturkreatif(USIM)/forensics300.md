@@ -1,6 +1,6 @@
 __PROBLEM__
 
-we're given 'jangan spam la ngok.doc' file..
+we're given [jangan spam la ngok.doc](writeupfiles/jangan spam la ngok.doc) file..
 
 `file jangan spam la ngok.doc`
 
