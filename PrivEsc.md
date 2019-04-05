@@ -20,7 +20,7 @@ __python server__
 
 __interactive shell__
 
-(python -c "import pty;pty.spawn('/bin/sh')")
+(python -c "import pty;pty.spawn('/bin/bash')")
 
 __forwarding shell(victim)__
 
